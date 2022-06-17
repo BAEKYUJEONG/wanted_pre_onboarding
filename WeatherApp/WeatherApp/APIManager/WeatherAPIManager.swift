@@ -46,6 +46,7 @@ class WeatherAPIManager {
                 do {
                     let decoder = JSONDecoder()
                     let userData = try decoder.decode(WeatherResponse.self, from: data)
+                    print(userData)
                     completion(userData, nil)
                 } catch {
                     completion(nil, .invalidData)

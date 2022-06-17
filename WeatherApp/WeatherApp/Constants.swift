@@ -12,5 +12,5 @@ struct APIKey {
 }
 
 struct EndPoint {
-    static let openWeatherURL = "https://api.openweathermap.org/data/2.5/weather?"
+    static let openWeatherURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&lang=kr&"
 }

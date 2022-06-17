@@ -22,7 +22,7 @@ class WeatherViewController: UIViewController {
         weatherTableView.dataSource = self
         //weatherTableView.prefetchDataSource = self
         
-        
+        // fetch data
         for name in cityArray {
             fetchWeatherData(city: name)
         }
@@ -84,5 +84,14 @@ extension WeatherViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(weatherList[indexPath.row].name)
+        
+        // 1. Storyboard
+        let sb = UIStoryboard(name: "WeatherDetail", bundle: nil)
+        
+        // 2. ViewController
+        let vc = sb.instantiateViewController(withIdentifier: WeatherDetailViewController.identifier) as! WeatherDetailViewController
+        
+        // 3. Push
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

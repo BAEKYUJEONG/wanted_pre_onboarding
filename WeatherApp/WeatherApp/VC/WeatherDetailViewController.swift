@@ -10,6 +10,8 @@ import UIKit
 // 도시이름, 날씨 아이콘, 현재기온, 체감기온, 헌재습도, 최저기온, 최고기온, 기압, 풍속, 날씨설명
 
 class WeatherDetailViewController: UIViewController {
+    
+    static let identifier = "WeatherDetailViewController"
 
     @IBOutlet weak var detailCityLabel: UILabel!
     @IBOutlet weak var detailDescriptionLabel: UILabel!

@@ -17,6 +17,8 @@
 		681D78A5285B98A000192784 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D78A4285B98A000192784 /* WeatherModel.swift */; };
 		681D78A7285B99B300192784 /* WeatherAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D78A6285B99B300192784 /* WeatherAPIManager.swift */; };
 		681D78AA285B9B6400192784 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D78A9285B9B6400192784 /* Constants.swift */; };
+		681D78AC285CC62100192784 /* WeatherDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681D78AB285CC62100192784 /* WeatherDetail.storyboard */; };
+		681D78AE285CC67300192784 /* WeatherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D78AD285CC67300192784 /* WeatherDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		681D78A4285B98A000192784 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		681D78A6285B99B300192784 /* WeatherAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIManager.swift; sourceTree = "<group>"; };
 		681D78A9285B9B6400192784 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		681D78AB285CC62100192784 /* WeatherDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeatherDetail.storyboard; sourceTree = "<group>"; };
+		681D78AD285CC67300192784 /* WeatherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			children = (
 				681D789C285B36BD00192784 /* WeatherViewController.swift */,
 				681D789E285B381000192784 /* WeatherTableViewCell.swift */,
+				681D78AD285CC67300192784 /* WeatherDetailViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				681D789A285B369E00192784 /* Weather.storyboard */,
+				681D78AB285CC62100192784 /* WeatherDetail.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +177,7 @@
 			files = (
 				681D7890285B1A8F00192784 /* LaunchScreen.storyboard in Resources */,
 				681D789B285B369E00192784 /* Weather.storyboard in Resources */,
+				681D78AC285CC62100192784 /* WeatherDetail.storyboard in Resources */,
 				681D788D285B1A8F00192784 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,6 +191,7 @@
 			files = (
 				681D789F285B381000192784 /* WeatherTableViewCell.swift in Sources */,
 				681D789D285B36BD00192784 /* WeatherViewController.swift in Sources */,
+				681D78AE285CC67300192784 /* WeatherDetailViewController.swift in Sources */,
 				681D7884285B1A8F00192784 /* AppDelegate.swift in Sources */,
 				681D78A7285B99B300192784 /* WeatherAPIManager.swift in Sources */,
 				681D78AA285B9B6400192784 /* Constants.swift in Sources */,

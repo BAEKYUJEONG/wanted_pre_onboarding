@@ -17,7 +17,7 @@ enum APIError: Error {
 
 class WeatherAPIManager {
     
-    func getWeather(city: String, completion: @escaping (Weather?, APIError?) -> Void) {
+    func getWeather(city: String, completion: @escaping (WeatherResponse?, APIError?) -> Void) {
         let url = URL(string: "\(EndPoint.openWeatherURL)q=\(city)&appid=\(APIKey.OPEN_WEATHER)")!
 
         URLSession.shared.dataTask(with: url) { data, response, error in
@@ -45,7 +45,7 @@ class WeatherAPIManager {
                 
                 do {
                     let decoder = JSONDecoder()
-                    let userData = try decoder.decode(Weather.self, from: data)
+                    let userData = try decoder.decode(WeatherResponse.self, from: data)
                     completion(userData, nil)
                 } catch {
                     completion(nil, .invalidData)

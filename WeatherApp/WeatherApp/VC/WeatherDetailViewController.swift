@@ -12,6 +12,17 @@ import UIKit
 class WeatherDetailViewController: UIViewController {
     
     static let identifier = "WeatherDetailViewController"
+    
+    var city: String?
+    var descript: String?
+    var icon: String?
+    var temp: String?
+    var tempMax: String?
+    var tempMin: String?
+    var feelsLike: String?
+    var humi: String?
+    var pressure: String?
+    var speed: String?
 
     @IBOutlet weak var detailCityLabel: UILabel!
     @IBOutlet weak var detailDescriptionLabel: UILabel!
@@ -26,7 +37,25 @@ class WeatherDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        settingUI()
     }
-
+    
+    func settingUI() {
+        detailCityLabel.text = city
+        detailDescriptionLabel.text = descript
+        detailTempLabel.text = temp
+        detailTempMaxLabel.text = tempMax
+        detailTempMinLabel.text = tempMin
+        detailFeelsLikeLabel.text = feelsLike
+        detailHumidityLabel.text = humi
+        detailPressureLabel.text = pressure
+        detailSpeedLabel.text = speed
+        
+        let imageUrl = URL(string: "https://openweathermap.org/img/wn/\(icon ?? "00")@2x.png")
+        let data = try? Data(contentsOf: imageUrl!)
+        if let data = data {
+            detailIconImageView.image = UIImage(data: data)
+        }
+    }
 }

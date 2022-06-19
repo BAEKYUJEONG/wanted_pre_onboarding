@@ -91,6 +91,18 @@ extension WeatherViewController: UITableViewDelegate, UITableViewDataSource {
         // 2. ViewController
         let vc = sb.instantiateViewController(withIdentifier: WeatherDetailViewController.identifier) as! WeatherDetailViewController
         
+        let row = weatherList[indexPath.row]
+        vc.city = row.name
+        vc.descript = row.weather.first?.description
+        vc.icon = row.weather.first?.icon
+        vc.temp = "\(Int(row.main.temp))°"
+        vc.tempMax = "최고:\(Int(row.main.temp_max))°"
+        vc.tempMin = "최저:\(Int(row.main.temp_min))°"
+        vc.feelsLike = "체감온도 : \(Int(row.main.feels_like))°"
+        vc.humi = "\(row.main.humidity)%"
+        vc.pressure = "\(row.main.pressure)"
+        vc.speed = "\(row.wind.speed)"
+        
         // 3. Push
         self.navigationController?.pushViewController(vc, animated: true)
     }
